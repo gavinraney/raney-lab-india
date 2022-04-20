@@ -98,3 +98,30 @@ $("#btn").on("click", () => {
       }
     });
   });
+
+$("#DONOTFIRETHISCODE").click(function () {
+    console.log("clicked");
+    let jsonURL = "../fave.json";
+
+    $.ajax({
+      url: jsonURL,
+
+      // The name of the callback parameter, as specified by the YQL service
+      jsonp: "callback",
+
+      // Tell jQuery we're expecting JSONP
+      dataType: "jsonp",
+
+      // Tell YQL what we want and that we want JSON
+      data: {
+        format: "json",
+      },
+
+      // Work with the response
+      success: function (response) {
+        console.log(response); // server response
+      },
+    });
+
+    //end of btn click event
+  });
