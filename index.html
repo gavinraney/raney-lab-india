@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>raney-lab-hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1> hamstergrams </h1>
+  <p> the current date and time is: <span id='datetime'></span>. subsequently, it is time for you to look at hamsters :)</p>
+</div>
+  
+  <br>
+
+<div class="col-md-8 offset-md-2">   
+<div class = "card">
+  <div class = "card-header">
+    <h3> log in </h3>
+  </div>
+  <div class = "card-body">
+  <div class = "dataContainer">
+  <form id="login">
+    <label>username</label>
+    <input type="text" id="username" name="username" placeholder="e.g. hamsperlover50" required>
+    <br>
+    <label>password</label>
+    <input type="password" id="password" name="password" placeholder="e.g. hamstersr2cool!" required>
+    <br>
+    <label>phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <br> 
+    <p id="outputUNPWT"></p>
+    <button id="submitLogin" type="button"> submit</button> <!--so it wont refresh (i hope)-->
+    <button id="reset" type="reset"> reset </button>
+  </form>
+  </div>
+  <!--load in as a guest w JSON-->
+  <br>
+  <button id="faveLogin" type="button">load in as a favorited user</button>
+  </div>
+</div>
+</div>
+
+<br>
+
+<div class="col-md-8 offset-md-2"> 
+<div class = "card">
+  <div class = "card-header">
+    <h3> who is the coolest haster on the block </h3>
+  </div>
+  <div class = "card-body">
+    <p>choose wisely:</p>
+<div>
+  <input type="radio" name="hamsterName" value="gumball" id="gumball" required>
+  <label for="gumball">gumball</label>
+  <img src = "img/gumball.png" alt = "gumball" style = "width:400px">
+</div>
+<br>
+<div>
+  <input type="radio" name="hamsterName" value="bagel" id="bagel" required>
+  <label for="bagel">bagel</label>
+    <img src = "img/bagel.png" alt = "bagel" style = "width:400px">
+</div>
+<br>
+<div>
+  <input type="radio" name="hamsterName" value="banana" id="banana" required>
+  <label for="banana">banana</label>
+  <img src = "img/banana.png" alt = "banana" style = "width:400px">
+</div>
+<br>
+<div>
+  <input type="radio" name="hamsterName" value="hamburger" id="hamburger" required>
+  <label for="hamburger">hamburger</label>
+  <img src = "img/hamburger.png" alt = "hamburger" style = "width:400px">
+</div>
+   <br>
+<p>
+  <button id="btn" type="submit">show your results</button>
+</p>
+
+<p id="output"></p>
+  </div>
+</div>
+</div>>
+
+<br>
+
+<div class="col-md-8 offset-md-2"> 
+<div class = "card">
+  <div class = "card-header">
+    <h3> send a hamstergram </h3>
+  </div>
+  <div class = "card-body">
+<!--email-->
+    <label>receiver email</label>
+    <input type="email" id="email" name="email" placeholder="e.g. hamster@hmail.com" required>
+<!--date-->
+  <br>
+  <label for="date">delivery date</label>
+  <input type="date" id="date" name="date">
+<!--hamster-->
+<form>
+  <label for="hamsters">choose a hamster:</label>
+  <img src = "img/theteam.jpg" alt = "team" style = "width:400px">
+  <select name="hamsters" id="hamsters">
+    <option value="Basketball">Basketball</option>
+    <option value="Reggie">Reggie</option>
+    <option value="Croquette">Croquette</option>
+    <option value="Gummy">Gummy</option>
+    <option value="Terror">Terror</option>
+    <option value="Goku">Goku</option>
+    <option value="Mochi">Mochi</option>
+    <option value="Gerbil">Gerbil</option>
+    <option value="Degu">Degu</option>
+    <option value="Stapler">Stapler</option>
+    <option value="Sephiroth">Sephiroth</option>
+    <option value="Babytron">Babytron</option>
+  </select>
+  <hr>
+  <label for="hMesg" class="form-label">choose a message</label>
+    <select id="hMesg" class="form-select" type="select" name="hMesg" disabled>
+      <option>select a hamster first!</option>
+    </select>
+  <br><br>
+  <button id="send" value="submit"> send a hamstergram</button>
+</form>
+  </div>
+</div>
+</div>
+
+<br>
+
+<div class="col-md-8 offset-md-2"> 
+<div class = "card">
+  <div class = "card-header">
+    <h3>what do u think of him.. billy</h3>
+  </div>
+  <div class = "card-body">
+    <img src = "img/billy.png" alt = "billy" style = "width:400px">
+    <br><br>
+    <form>
+      <input type="checkbox" id="neat" name="neat" value="neat">
+      <label for="neat"> he is neat</label><br>
+      <input type="checkbox" id="epic" name="epic" value="epic">
+      <label for="epic"> he is epic</label><br>
+      <input type="checkbox" id="evil" name="evil" value="evil">
+      <label for="evil"> he is evil >:D</label><br><br>
+      <button id="billy" value="submit">submit your billy opinions</button>
+  </form>
+  </div>
+</div>
+</div>
+    
+<br>
+    <div class = "footer">
+  <h5> <a href = "https://github.com/gavinraney/raney-lab-india" target ="_blank"> repo </a> <span> || </span> <a href = "https://validator.w3.org/nu/?doc=https%3A%2F%2Fgavinraney.github.io%2Franey-lab-india%2F" target ="_blank"> nu </a> </h5>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script src="./scripts/script.js"></script>
+
+</body>
+</html>
