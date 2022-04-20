@@ -1,0 +1,59 @@
+body{
+background-image: url('https://media.istockphoto.com/vectors/abstract-seamless-pattern-made-of-simple-colored-geometric-shapes-vector-id1359831613?k=20&m=1359831613&s=612x612&w=0&h=JSLA3bFjRE4Pf9LycAYDbI0L_f-bHAgcRmczF6_o660=');
+}
+
+img {
+  border: 5px solid saddlebrown;
+  border-radius: 4px;
+  padding: 3px;
+  object-fit: contain;
+}
+
+input[type="radio"]{
+  vertical-align:middle;
+}
+
+input[type="checkbox"]{
+  vertical-align:middle;
+  }
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background: MediumPurple;
+  color: white;
+  font-size: 30px;
+}
+
+label {
+  /*
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  */
+  text-align: center;
+  width: 100px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 30px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+}
+.card {
+  margin: 5px;
+  padding: 16px;
+  text-align: center;
+  align-content: center;
+  background-color: #f1f1f1;
+}
+
+.footer{
+  padding: 20px;
+  text-align: center;
+  background: DarkSlateBlue;
+  color: white;
+  font-size: 20px;
+}
